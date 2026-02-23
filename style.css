@@ -28,6 +28,14 @@ input {
     border: 1px solid #ccc;
     border-radius: 4px;
 }
+.error {
+    border: 2px solid red;
+}
+.error-msg {
+    color: red !important;
+    font-weight: bold;
+    margin-top: 5px;
+}
 
 button {
     padding: 10px 20px;
