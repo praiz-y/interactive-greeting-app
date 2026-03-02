@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const greetButton = document.getElementById('greetButton');
     const greetingMessage = document.getElementById('greetingMessage');
     const resetButton  = document.getElementById('resetButton');
+
     const errorMessages = [
         "Please insert a name",
         "Name field cannot be empty",
@@ -23,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const getTime = () => {
     const hour = new Date().getHours();
     
-        if (hour < 12) return "Good Morning oo";
+        if (hour < 12) return "Good Morning";
         if (hour < 18) return "Good Afternoon";
         return "Good Evening";
     };
@@ -38,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
             greetingMessage.classList.remove("error-msg");
             nameInput.classList.remove("error");
 
-        }else{
+        } else {
             const randomError = errorMessages[Math.floor(Math.random() * errorMessages.length)];
             greetingMessage.textContent = randomError;
             greetingMessage.classList.add("error-msg");
